@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #000 !important;
+    max-width: 1200px;
+}
+h1{
+    color: #fff;
+}
+h2{
+    font-size: 28px;
+    padding-bottom: 10px;
+    color: #fff;
+}
+p{
+    font-size: 17px;
+    color: #fff;
+}
+.about-member{
+    position: relative;
+    display: flex;
+}
+.member-image{
+    width: 40%;
+    height: 420px !important;
+    border: 1px solid black;
+    animation: image-in 2.3s ease-in-out 1;
+}
+@keyframes image-in{
+    from{
+        transform: translateX(-2500px) skew(50deg);
+    }
+    to{
+        transform: translateX(0px) skew(0deg);
+    }
+}
+.member-details{
+    width: 55%;
+    height: 500px;
+    margin-bottom: 10px;
+}
+.member-details h2{
+    position: relative;
+}
+.member-details h2::before{
+    position: absolute;
+    transform-origin: left;
+    content: '';
+    top: 0;
+    left: 0;
+    background: #e02bff;
+    width: 100%;
+    height: 100%;
+    transform: scaleX(0);
+    animation: text-in 1.5s ease-in-out 1;
+}
+.member-details p{
+    position: relative;
+    margin: 20px 0px;
+}
+.member-details p::before{
+    position: absolute;
+    transform-origin: right;
+    content: '';
+    top: 0;
+    left: -30px;
+    background: #ffeb3b;
+    width: 150% !important;
+    height: 100%;
+    animation: text-in 1.5s ease-in-out 1;
+    transform: scaleX(0);
+}
+@keyframes text-in{
+    0%{
+        transform: scaleX(0);
+    }
+    50%{
+        transform: scaleX(1);
+    }
+    100%{
+        transform: scaleX(0);
+    }
+}
+.prv,.nxt{
+    background: #fff;
+    top: 90% !important;
+    height: 20px !important;
+    margin: 20px 0px;
+    width: 60px !important;
+    box-shadow: inset 0 0 20px purple;
+}
+.prev{
+    /* left: 25% !important; */
+}
+.nxt{
+    /* right: 25% !important; */
+}
+.carousel-control-prev-icon{
+    background-image: url(..//images/002-left-arrow.svg) !important;
+}
+.carousel-control-next-icon{
+    background-image: url(..//images/001-right-arrow.svg) !important;
+    /* background-color: #ff0000 !important; */
+    -webkit-background-clip: icon !important;
+} 
+.carousel-item{
+    transition: transform 1s ease, opacity .5s linear;
+}
+.radios{
+    width: 20px !important;
+    height: 20px !important;
+    border-radius: 50% !important;
+}
